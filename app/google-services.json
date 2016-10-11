@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1090708902004",
+    "firebase_url": "https://iuvare-app-f7557.firebaseio.com",
+    "project_id": "iuvare-app-f7557",
+    "storage_bucket": "iuvare-app-f7557.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090708902004:android:699b82a7188c9cc1",
+        "android_client_info": {
+          "package_name": "mx.coderia.iuvareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090708902004-4912qabnj0ekae9e3u57rii0isne4chk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk_ttKcUf7qnvNae0nUstv94zz5bZME2E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
