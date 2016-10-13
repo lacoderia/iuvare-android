@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Iuvare</string>
+    <string name="retry">Volver a intentar</string>
 </resources>
