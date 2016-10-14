@@ -1,5 +1,6 @@
 package mx.coderia.iuvareapp;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.net.ConnectivityManager;
@@ -18,10 +19,15 @@ import android.webkit.WebViewClient;
 public class MainActivity extends AppCompatActivity {
 
     private WebView mWebView;
+    private ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        progress = new ProgressDialog(this);
+        progress.setMessage("Loading...");
+        progress.show();
 
         loadWebView();
     }
@@ -36,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             mWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
-                    Log.println(Log.DEBUG, "ERROR", "ERROR GENERICO");
+                    Log.println(Log.DEBUG, "ERROR", "OCURRIO UN ERROR");
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
@@ -57,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onPageFinished(WebView view, String url) {
                     Log.println(Log.DEBUG, "SUCCESS", "SUCCESS GENERICO");
+
+                    progress.dismiss();
                 }
             });
 
@@ -66,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             WebSettings webSettings = mWebView.getSettings();
             webSettings.setJavaScriptEnabled(true);
 
-            mWebView.loadUrl("http://socios.iuvare.mxkjsd");
+            mWebView.loadUrl("http://socios.iuvare.mx");
 
         } else {
 
