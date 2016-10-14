@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             mWebView.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
-                    Log.println(Log.DEBUG, "ERROR", "OCURRIO UN ERROR");
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
@@ -62,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onPageFinished(WebView view, String url) {
-                    Log.println(Log.DEBUG, "SUCCESS", "SUCCESS GENERICO");
-
                     progress.dismiss();
                 }
             });
